@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+  <section class="signup-form hidden">
+    <picture>
+      <source media="(min-width: 769px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-mobile">
+    </picture>
+
+    <div class="content">
+      <h1>Stay updated!</h1>
+      <p class="header">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="description">
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      <div class="input">
+        <div class="top">
+          <label for="email">Email address</label>
+          <span class="error hidden">Valid email required</span>
+        </div>
+        <input type="email" name="email" id="email" placeholder="email@company.com" required="true">
+      </div>
+      <button class="btn1">Subscribe to monthly newsletter</button>
+    </div>
+  </section>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+
+  <section class="successmsg ">
+    <img src="./assets/images/icon-success.svg" alt="icon-success">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <span class="bold">ash@loremcompany.com</span>.
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button class="btn2">Dismiss message</button>
+  </section>
+
+  <!-- Success message end -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Alok Suman</a>.
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

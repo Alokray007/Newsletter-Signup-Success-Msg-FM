@@ -1,0 +1,264 @@
+/* ------- CSS Reset ----------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+s img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-primary-tomato: hsl(4, 100%, 67%);
+  --clr-Grey: hsl(231, 7%, 60%);
+  --clr-Charcoal-Grey: hsl(235, 18%, 26%);
+  --clr-Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --clr-background: hsl(0, 0%, 100%);
+
+  --font: 1rem;
+
+  --fw-rgl: 400;
+  --fw-bold: 700;
+
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--clr-background);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--clr-Dark-Slate-Grey);
+    font-weight: var(--fw-rgl);
+    font-size: var(--font);
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/fonts/Roboto-Regular.ttf) format(truetype);
+    font-weight: var(--fw-rgl);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/fonts/Roboto-Bold.ttf) format(truetype);
+    font-weight: var(--fw-bold);
+    font-style: normal;
+}
+
+.signup-form {
+    background-color: var(--clr-background);
+    max-width: 375px;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.signup-form h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: 2.5rem;
+    color: var(--clr-Charcoal-Grey);
+
+}
+
+.signup-form p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: var(--fw-rgl);
+    color: var(--clr-Charcoal-Grey);
+    margin: 1rem 0;
+    color: var(--clr-Charcoal-Grey);
+    font-size: 17px;
+}
+
+ul {
+    list-style-image: url(./assets/images/icon-list.svg);
+    width: 100%;
+    text-align: start;
+    margin: 1rem 0;
+    list-style-position: outside;
+    color: var(--clr-Charcoal-Grey);
+    font-family: 'Roboto';
+    font-weight: var(--fw-rgl);
+    font-style: normal;
+}
+
+ul li {
+    vertical-align:middle;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.input {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.input label{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+    color: var(--clr-Charcoal-Grey);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--clr-primary-tomato);
+    font-size: 13px;
+}
+
+input {
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: 1.5px solid var(--clr-Grey);
+    color: var(--clr-Grey);
+}
+
+.btn1 {
+    width: 100%;
+    background-color: var(--clr-Charcoal-Grey);
+    color: var(--clr-background);
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto';
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    background: linear-gradient( 90deg, rgb(178, 92, 106), var(--clr-primary-tomato));
+}
+
+/* Sucess section */
+
+.successmsg {
+    max-width: 375px;
+    background-color: var(--clr-background);
+    padding: 2rem;
+}
+
+.successmsg img {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+.successmsg h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: var(--clr-Charcoal-Grey);
+    line-height: 1;
+    font-family: 'Roboto';
+    font-weight: var(--fw-rgl);
+
+}
+
+.successmsg p {
+    margin-bottom: 15rem;
+    color: var(--clr-Charcoal-Grey);
+    font-family: 'Roboto';
+
+}
+
+.bold {
+    font-family: 'Roboto';
+}
+.btn2 {
+    width: 100%;
+    background-color: var(--clr-Charcoal-Grey);
+    color: var(--clr-background);
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto';
+    font-weight: var(--fw-rgl);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 769px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signup-form {
+        max-width: 800px;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1rem;
+    }
+
+    .content {
+        margin-top: 2.2rem;
+    }
+
+    /* success screen */
+
+    .successmsg {
+        max-width: 400px;
+    }
+
+    .successmsg img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .successmsg h1 {
+        margin-bottom: 1rem;
+
+    }
+
+    .successmsg p {
+        margin-bottom: 1rem;
+
+    }
+}
