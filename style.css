@@ -8,6 +8,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -47,6 +48,7 @@ h2 {
   --fw-rgl: 400;
   --fw-bold: 700;
 
+  --ff: 'Roboto', sans-serif;
 }
 
 .attribution {
@@ -57,6 +59,13 @@ h2 {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/fonts/Roboto-Regular.ttf) format(truetype);
+    font-weight: var(--fw-rgl);
+    font-style: normal;
 }
 
 .hidden {
@@ -72,21 +81,7 @@ body {
     background-color: var(--clr-Dark-Slate-Grey);
     font-weight: var(--fw-rgl);
     font-size: var(--font);
-}
-
-
-@font-face {
-    font-family: 'Roboto';
-    src: url(./assets/fonts/Roboto-Regular.ttf) format(truetype);
-    font-weight: var(--fw-rgl);
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url(./assets/fonts/Roboto-Bold.ttf) format(truetype);
-    font-weight: var(--fw-bold);
-    font-style: normal;
+    font-family: var(--ff);
 }
 
 .signup-form {
@@ -99,7 +94,6 @@ body {
 }
 
 .signup-form h1 {
-    font-family: 'Roboto', sans-serif;
     font-weight: var(--fw-bold);
     font-size: 2.5rem;
     color: var(--clr-Charcoal-Grey);
@@ -107,8 +101,6 @@ body {
 }
 
 .signup-form p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: var(--fw-rgl);
     color: var(--clr-Charcoal-Grey);
     margin: 1rem 0;
     color: var(--clr-Charcoal-Grey);
@@ -116,21 +108,23 @@ body {
 }
 
 ul {
-    list-style-image: url(./assets/images/icon-list.svg);
-    width: 100%;
-    text-align: start;
-    margin: 1rem 0;
-    list-style-position: outside;
     color: var(--clr-Charcoal-Grey);
-    font-family: 'Roboto';
-    font-weight: var(--fw-rgl);
-    font-style: normal;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
 }
 
 ul li {
-    vertical-align:middle;
     margin-bottom: 10px;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+ul li:not(:last-child) {
+    align-items:start;
 }
 
 .input {
@@ -141,9 +135,9 @@ ul li {
 
 .input label{
     font-size: 12px;
-    font-family: 'Roboto', sans-serif;
     margin-bottom: 5px;
     color: var(--clr-Charcoal-Grey);
+    font-weight: var(--fw-bold);
 }
 
 .top {
@@ -168,7 +162,6 @@ input {
     border-radius: 10px;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    font-family: 'Roboto';
     font-weight: 100;
     cursor: pointer;
 }
@@ -195,7 +188,6 @@ input {
     font-size: 3rem;
     color: var(--clr-Charcoal-Grey);
     line-height: 1;
-    font-family: 'Roboto';
     font-weight: var(--fw-rgl);
 
 }
@@ -203,13 +195,13 @@ input {
 .successmsg p {
     margin-bottom: 15rem;
     color: var(--clr-Charcoal-Grey);
-    font-family: 'Roboto';
 
 }
 
 .bold {
-    font-family: 'Roboto';
+    font-weight: var(--fw-bold);
 }
+
 .btn2 {
     width: 100%;
     background-color: var(--clr-Charcoal-Grey);
@@ -239,7 +231,20 @@ input {
 
     .content {
         margin-top: 2.2rem;
+        width: 60%;
     }
+
+    .img {
+        width: 40%;
+    }
+
+    .img source {
+        width: 100%;
+
+    }
+
+    ul li {
+        align-items: center;
 
     /* success screen */
 
