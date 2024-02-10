@@ -68,17 +68,13 @@ h2 {
     font-style: normal;
 }
 
-.hidden {
-    display: none;
-}
-
 body {
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--clr-Dark-Slate-Grey);
+    background-color: var(--clr-Charcoal-Grey);
     font-weight: var(--fw-rgl);
     font-size: var(--font);
     font-family: var(--ff);
@@ -87,6 +83,12 @@ body {
 .signup-form {
     background-color: var(--clr-background);
     max-width: 375px;
+    color: var(--clr-Dark-Slate-Grey);
+}
+
+.signup-form.success {
+    display: initial;
+    padding: 3.5rem;
 }
 
 .content {
@@ -96,28 +98,15 @@ body {
 .signup-form h1 {
     font-weight: var(--fw-bold);
     font-size: 2.5rem;
-    color: var(--clr-Charcoal-Grey);
-
 }
 
 .signup-form p {
-    color: var(--clr-Charcoal-Grey);
     margin: 1rem 0;
-    color: var(--clr-Charcoal-Grey);
-    font-size: 17px;
 }
 
-ul {
-    color: var(--clr-Charcoal-Grey);
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-
-}
 
 ul li {
     margin-bottom: 10px;
-    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -127,47 +116,54 @@ ul li:not(:last-child) {
     align-items:start;
 }
 
-.input {
-    margin: 1rem 0;
+.form-item {
     display: flex;
     flex-direction: column;
 }
 
-.input label{
+.form-item label {
     font-size: 12px;
-    margin-bottom: 5px;
-    color: var(--clr-Charcoal-Grey);
     font-weight: var(--fw-bold);
-}
-
-.top {
     display: flex;
     justify-content: space-between;
-    color: var(--clr-primary-tomato);
-    font-size: 13px;
 }
 
-input {
-    padding: 10px 25px;
+.form-item label .error-email{
+    color: var(--clr-primary-tomato);
+    display: none;
+}
+
+.form-item label .error-email.active{
+    display: block;
+}
+
+.form-item input,
+.form-item button {
+    padding: 1rem;
+    margin-bottom: 1rem;
     border-radius: 8px;
-    border: 1.5px solid var(--clr-Grey);
-    color: var(--clr-Grey);
+}
+
+.form-item input {
+    border: 1px solid var(--clr-Grey);
+}
+
+.form-item input.active {
+    background-color: rgba(255, 98, 87, 0.2);
+    border: 1px solid var(--clr-primary-tomato);
 }
 
 .btn1 {
-    width: 100%;
-    background-color: var(--clr-Charcoal-Grey);
+    background-color: var(--clr-Dark-Slate-Grey);
     color: var(--clr-background);
-    padding: 10px 0;
-    border-radius: 10px;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    font-weight: 100;
+    font-weight: var(--fw-bold);
+    outline: none;
+    border: none;
     cursor: pointer;
 }
 
-.btn1:hover {
-    background: linear-gradient( 90deg, rgb(178, 92, 106), var(--clr-primary-tomato));
+.btn1:hover, .btn2:hover {
+    background: linear-gradient( 127deg, rgba(255, 63, 124, 1) 40%, rgb(229, 40, 15) 70%);
 }
 
 /* Sucess section */
@@ -176,6 +172,12 @@ input {
     max-width: 375px;
     background-color: var(--clr-background);
     padding: 2rem;
+    color: var(--clr-Dark-Slate-Grey);
+    display: none;
+}
+
+.successmsg.active {
+    display: block;
 }
 
 .successmsg img {
@@ -186,15 +188,12 @@ input {
 .successmsg h1 {
     margin-bottom: 1rem;
     font-size: 3rem;
-    color: var(--clr-Charcoal-Grey);
     line-height: 1;
-    font-weight: var(--fw-rgl);
-
+    font-weight: var(--fw-bold);
 }
 
 .successmsg p {
     margin-bottom: 15rem;
-    color: var(--clr-Charcoal-Grey);
 
 }
 
@@ -204,15 +203,15 @@ input {
 
 .btn2 {
     width: 100%;
-    background-color: var(--clr-Charcoal-Grey);
+    background-color: var(--clr-Dark-Slate-Grey);
     color: var(--clr-background);
-    padding: 15px 0;
-    border-radius: 10px;
-    margin-top: 0.5rem;
+    padding: 1rem;
     margin-bottom: 1rem;
-    font-family: 'Roboto';
-    font-weight: var(--fw-rgl);
+    border-radius: 8px;
+    font-weight: var(--fw-bold);
     cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 @media only screen and (min-width: 769px) {
@@ -223,33 +222,38 @@ input {
     }
 
     .signup-form {
-        max-width: 800px;
+        max-width: 900px;
         display: flex;
         flex-direction: row-reverse;
         padding: 1rem;
+        border-radius: 1.5rem;
+    }
+
+    .signup-form.success {
+        display: block;
+        padding: initial;
     }
 
     .content {
-        margin-top: 2.2rem;
-        width: 60%;
+        margin: 2rem 0.5rem;
     }
 
-    .img {
-        width: 40%;
+    .content h1 {
+        font-size: 3.5rem;
     }
 
-    .img source {
-        width: 100%;
-
-    }
-
-    ul li {
-        align-items: center;
 
     /* success screen */
 
     .successmsg {
         max-width: 400px;
+        display: none;
+        border-radius: 1.5rem;
+    }
+
+    .successmsg.active {
+        max-width: 400px;
+        display: block;
     }
 
     .successmsg img {
@@ -264,6 +268,5 @@ input {
 
     .successmsg p {
         margin-bottom: 1rem;
-
     }
 }

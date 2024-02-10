@@ -1,52 +1,59 @@
-let btn1 = document.getElementsByClassName("btn1");
-let btn2 = document.getElementsByClassName("btn2");
+const signupform = document.getElementById("signup-form");
+const leftP = document.getElementById("left");
+const rightP = document.getElementById("right");
 
-let signupform = document.querySelectorAll("section")[0];
-let successmsg = document.querySelectorAll("section")[1];
+const useremail = document.getElementById("user-email");
+const erroremail = document.getElementById("error-email");
+const emailinput = document.getElementById("email");
+const submitbtn = document.getElementById("btn1");
 
-let email = document.querySelector("#email").value;
-let errormsg = document.querySelector(".error");
+const successmsg = document.getElementById("successmsg");
+const dismissbtn = document.getElementById("btn2");
 
-btn1Array = Array.from(btn1);
-btn2Array = Array.from(btn2);
+const form = document.getElementById("form");
 
-const form = document.querySelector(".input");
-const bold = document.querySelector(".bold");
+function formSuccess() {
+    successmsg.classList.add("active");
+    signupform.classList.add("success");
+    leftP.style.display = "none";
+    rightP.style.display = "none";
+}
 
-
-
-const validateEmail = (email) => {
+function validateEmail(email) {
     return String(email)
       .toLowerCase()
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
-  };
+};
 
-if (validateEmail) {
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        console.log("form submitted");
-        signupform.classList.add("hidden");
-        successmsg.classList.remove("hidden");
-        bold.innerHTML = email;
-        console.log(email);
-    })
-} else {
-    errormsg.classList.remove("hidden");
-}
+form.addEventListener("submit", (e) => {
+// submitbtn.addEventListener("click", (e) => {
 
-btn2Array.forEach(elem => {
-    elem.onclick = () => {
-        successmsg.classList.add("hidden");
-        signupform.classList.remove("hidden");
+    e.preventDefault();
+    const email = emailinput.value;
+    console.log(email);
+    console.log("hi");
+
+    if (validateEmail(email)) {
+        formSuccess()
+        useremail.innerHTML = email;
+        emailinput.value = "";
+
+        erroremail.classList.remove("active");
+        emailinput.classList.remove("active");
+
+
+    } else {
+        erroremail.classList.add("active");
+        emailinput.classList.add("active");
+        emailinput.style.color = "hsl(4, 100%, 67%)";
     }
-});
+})
 
-
-// btn1Array.forEach(elem => {
-//     elem.onclick = () => {
-        // signupform.classList.add("hidden");
-        // successmsg.classList.remove("hidden");
-//     }
-// });
+dismissbtn.addEventListener("click", (e) => {
+    leftP.style.display = "block";
+    rightP.style.display = "block";
+    signupform.classList.remove("success");
+    successmsg.classList.remove("active");
+})

@@ -10,9 +10,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -36,8 +33,11 @@ Users should be able to:
 
 ![mobile-1](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/mobile-design.png)
 ![desktop](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-design.png)
-![mobile-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/mobile-thank-you-state.png)
-![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-thank-you-state.png)
+![mobile-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/active-states.png)
+![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-success-active.png)
+![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-success.png)
+![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/error-states.png)
+![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/mobile-success.png)
 
 
 ### Links
