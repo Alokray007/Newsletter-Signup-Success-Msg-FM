@@ -31,13 +31,13 @@ Users should be able to:
 
 ### Screenshot
 
-![mobile-1](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/mobile-design.png)
-![desktop](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-design.png)
-![mobile-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/active-states.png)
-![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-success-active.png)
-![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-success.png)
-![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/error-states.png)
-![desktop-thankyou](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/mobile-success.png)
+![mobile-design](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/mobile-design.png)
+![desktop-design](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-design.png)
+![active-states](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/active-states.png)
+![desktop-success-active](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-success-active.png)
+![desktop-success](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/desktop-success.png)
+![error-states](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/error-states.png)
+![mobile-success](https://raw.github.com/Alokray007/Newsletter-Signup-Success-Msg-FM/main/screenshots/mobile-success.png)
 
 
 ### Links
